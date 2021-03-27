@@ -24,11 +24,11 @@ GameManager.prototype.setup = function () {
 
   var select = document.gameModeForm.gameModeSelect;
   this.gameMode     = +(select.options[select.selectedIndex].value);
-  this.tileTypes = [2,3,5,7];
+  this.tileTypes = [2,3,5,7,11,13,17,23,29,31];
   if (this.gameMode & 1) {
-    this.tileTypes = [2];
+    this.tileTypes = [31];
     this.actuator.updateCurrentlyUnlocked(this.tileTypes);
-    this.tilesSeen = [2];
+    this.tilesSeen = [31];
   } 
 
   this.score        = 0;
